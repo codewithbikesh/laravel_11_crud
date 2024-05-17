@@ -1,0 +1,7 @@
+1) first configuration database file .env  
+2) To Make table using orm model 
+   php artisan make:migration create_products_table 
+3) To Make Controller 
+   php artisan make:controller ProductController 
+4) To Make Model 
+   php artisan make:model Product
