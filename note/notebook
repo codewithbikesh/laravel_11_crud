@@ -1,4 +1,4 @@
-1) first configuration database file .env  
+<!-- 1) first configuration database file .env  
 2) To Make table using orm model 
    php artisan make:migration create_table_name_table 
 3) To Make Controller 
@@ -8,3 +8,16 @@
 
    Youtube Channel Url 
    https://www.youtube.com/watch?v=jG5TlWtnG3A&t=2089s
+
+
+   User ReCaptcha 
+   https://www.itsolutionstuff.com/post/laravel-5-google-recaptcha-code-and-validation-example-using-anhskohbo-no-captcha-packageexample.html
+
+   Google Map Integration 
+   https://www.itsolutionstuff.com/post/google-maps-api-autocomplete-address-search-box-with-map-exampleexample.html -->
+
+   <!-- How to integrate ReCaptcha in form  -->
+   https://www.google.com/recaptcha/admin/create
+
+   1) First Install jetstream livewire 
+      php artisan jetstream:install livewire 

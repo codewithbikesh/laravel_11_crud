@@ -18,8 +18,6 @@ class ProductController extends Controller
     }
 
 
-
-
     // this method will show create products page 
     public function create(){
       return view("products.create");
