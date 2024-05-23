@@ -24,9 +24,9 @@ public function authenticate(Request $request){
      ]);
      if($validator->passes()){
        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-         
+         return redirect()->route('account.dashboard');
        }else{
-        return redirect()->route('account.login')->with('Either email or password is incorrect.');
+        return redirect()->route('account.login')->with('error','Either email or password is incorrect.');
        }
      }else{
         return redirect()->route('account.login')->withInput()->withErrors($validator);
@@ -42,7 +42,10 @@ public function authenticate(Request $request){
  public function processRegister(Request $request){
     $validator = Validator::make($request->all(),[
         'email' => 'required|email|unique:users',
-        'password' => 'required|confirmed'
+        'password' => 'required|confirmed|min:5',
+        'name' => 'required',
+        'password_confirmation' => 'required',
+
         ]);
         if($validator->passes()){
         $user = new User();
@@ -58,4 +61,8 @@ public function authenticate(Request $request){
         }
  }
 
+ public function logout(){
+   Auth::logout();
+   return redirect()->route('account.login');
+ }
 }
